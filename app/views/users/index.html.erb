@@ -1,0 +1,10 @@
+<% provide(:title, 'Todos') %>
+<h1>Todos os usuários</h1>
+
+<%= will_paginate @collection, :previous_label => t("← Anterior"), :next_label => t("Próximo →") %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
